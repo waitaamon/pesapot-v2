@@ -1,10 +1,19 @@
+{{--
+-- Important note:
+--
+-- This template is based on an example from Tailwind UI, and is used here with permission from Tailwind Labs
+-- for educational purposes only. Please do not use this template in your own projects without purchasing a
+-- Tailwind UI license, or they’ll have to tighten up the licensing and you’ll ruin the fun for everyone.
+--
+-- Purchase here: https://tailwindui.com/
+--}}
 
 @props(['label' => ''])
 
 <div x-data="{ open: false }" @keydown.window.escape="open = false" @click.away="open = false" class="relative inline-block text-left z-10">
     <div>
         <span class="rounded-md shadow-sm">
-            <button @click="open = !open" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-900 hover:text-gray-900 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-900 transition ease-in-out duration-150" id="options-menu" aria-haspopup="true" x-bind:aria-expanded="open" aria-expanded="true">
+            <button @click="open = !open" type="button" class="inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-sm leading-5 font-medium text-gray-700 hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue active:bg-gray-50 active:text-gray-800 transition ease-in-out duration-150" id="options-menu" aria-haspopup="true" x-bind:aria-expanded="open" aria-expanded="true">
                 {{ $label }}
 
                 <svg class="-mr-1 ml-2 h-5 w-5" x-description="Heroicon name: chevron-down" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">

@@ -16,8 +16,20 @@
                         {{ __('Dashboard') }}
                     </x-jet-nav-link>
 
-                    <x-jet-nav-link href="{{ route('cashReceipt') }}" :active="request()->routeIs('cashReceipt')">
+                    <x-jet-nav-link href="{{ route('customers') }}" :active="request()->routeIs('customers')">
                         {{ __('Customers') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('cashReceipt') }}" :active="request()->routeIs('cashReceipt')">
+                        {{ __('Cash Receipts') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('suppliers') }}" :active="request()->routeIs('suppliers')">
+                        {{ __('Suppliers') }}
+                    </x-jet-nav-link>
+
+                    <x-jet-nav-link href="{{ route('cashPayment') }}" :active="request()->routeIs('cashPayment')">
+                        {{ __('Cash Payments') }}
                     </x-jet-nav-link>
                 </div>
             </div>

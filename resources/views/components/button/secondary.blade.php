@@ -8,4 +8,4 @@
 -- Purchase here: https://tailwindui.com/
 --}}
 
-<x-button class="border-gray-300 text-gray-900 active:bg-gray-50 active:text-gray-900 hover:text-gray-900" {{ $attributes }}>{{ $slot }}</x-button>
+<x-button class="border-gray-300 text-gray-700 active:bg-gray-50 active:text-gray-800 hover:text-gray-500" {{ $attributes }}>{{ $slot }}</x-button>

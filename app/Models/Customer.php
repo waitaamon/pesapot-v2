@@ -19,6 +19,12 @@ class Customer extends Model
             ][$this->status] ?? 'cool-gray';
     }
 
+    const STATUSES = [
+        'active' => 'Active',
+        'deactivated' => 'Deactivated',
+        'processing' => 'Processing',
+    ];
+
     public function getStatusAttribute(): string
     {
         return $this->trashed() ? 'Deactivated' : 'Active';
