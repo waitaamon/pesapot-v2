@@ -15,7 +15,12 @@ class CreateCashReceiptsTable extends Migration
     {
         Schema::create('cash_receipts', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('customer_id')->constrained();
+            $table->foreignId('user_id')->constrained();
+            $table->bigInteger('amount')->default(0);
+            $table->boolean('transferred')->default(false);
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

@@ -17,7 +17,7 @@
                     </x-jet-nav-link>
 
                     <x-jet-nav-link href="{{ route('cashReceipt') }}" :active="request()->routeIs('cashReceipt')">
-                        {{ __('Cash Receipt') }}
+                        {{ __('Customers') }}
                     </x-jet-nav-link>
                 </div>
             </div>

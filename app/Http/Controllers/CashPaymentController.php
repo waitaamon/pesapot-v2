@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-class CashReceiptController extends Controller
+class CashPaymentController extends Controller
 {
     public function __invoke()
     {
-        return view('cash-receipt');
+        return view('cash-payment');
     }
 }

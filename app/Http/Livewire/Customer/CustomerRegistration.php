@@ -9,10 +9,17 @@ class CustomerRegistration extends Component
 {
     public bool $show = false;
     public string $name = '';
+    public bool $saveNew = false;
 
     protected $rules = [
-        'name' => ['required', 'string', 'max:255', 'unique:customers']
+        'name' => ['required', 'string', 'max:254', 'unique:customers']
     ];
+
+    public function saveAndNew()
+    {
+        $this->saveNew = true;
+        $this->store();
+    }
 
     public function store()
     {
@@ -20,12 +27,13 @@ class CustomerRegistration extends Component
 
         Customer::create(['name' => $this->name]);
 
-        session()->flash('flash.banner', 'Customer successfully added!');
-        session()->flash('flash.bannerStyle', 'success');
+        request()->session()->flash('flash.banner', 'Customer successfully added!');
+        request()->session()->flash('flash.bannerStyle', 'success');
 
         $this->reset('name');
 
-        $this->show = false;
+        return redirect()->route('dashboard');
+        $this->show = $this->saveNew;
     }
 
     public function render()
