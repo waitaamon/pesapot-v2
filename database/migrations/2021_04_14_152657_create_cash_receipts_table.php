@@ -18,7 +18,9 @@ class CreateCashReceiptsTable extends Migration
             $table->foreignId('customer_id')->constrained();
             $table->foreignId('user_id')->constrained();
             $table->bigInteger('amount')->default(0);
-            $table->boolean('transferred')->default(false);
+            $table->string('status')->default('active');
+            $table->timestamp('date')->default(now());
+            $table->text('note')->nullable();
             $table->timestamps();
             $table->softDeletes();
         });

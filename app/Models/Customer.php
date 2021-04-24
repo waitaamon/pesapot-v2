@@ -22,7 +22,6 @@ class Customer extends Model
     const STATUSES = [
         'active' => 'Active',
         'deactivated' => 'Deactivated',
-        'processing' => 'Processing',
     ];
 
     public function getStatusAttribute(): string
